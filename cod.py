@@ -1,3 +1,6 @@
+pylint: disable=missing-module-docstring
+pylint: disable=missing-function-docstring
+
 import os
 import git
 import subprocess
@@ -8,7 +11,7 @@ def clone_repository(repo_url, target_dir):
 
 # Запуск SAST анализатора на коде
 def run_sast_analysis(target_dir):
-    command = f"pylint {target_dir}"  # Пример использования pylint, но можно заменить на любой другой анализатор
+    command = f"pylint {target_dir}"
     subprocess.run(command, shell=True)
 
 # Формирование документа с результатами
@@ -22,9 +25,8 @@ def generate_report(results):
 
 # Основная функция скрипта
 def main():
-    # Задайте URL репозитория и целевую директорию для клонирования
-    repo_url = "https://github.com/DevOps-spb-org/python-examples"
-    target_dir = "D:\test"
+    repo_url = "https://github.com/Orihalk/123.git"
+    target_dir = r"C:\Users\drim3\123"
 
     # Клонирование репозитория
     clone_repository(repo_url, target_dir)
