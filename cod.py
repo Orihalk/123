@@ -1,5 +1,4 @@
-pylint: disable=missing-module-docstring
-pylint: disable=missing-function-docstring
+"""Module providing a function printing python version."""
 
 import os
 import git
