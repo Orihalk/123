@@ -20,7 +20,7 @@ def run_sast_analysis(target_dir):
 
 # Формирование документа с результатами
 def generate_report(results):
-    with open("report.txt", "w") as file:
+    with open("report.txt", "w", encoding="utf-8") as file:
         file.write("Результаты анализа уязвимостей:\n")
         for result in results:
             file.write(f"Файл: {result['filename']}\n")
