@@ -5,7 +5,6 @@
 # pylint: disable=trailing-newlines
 # pylint: disable=trailing-whitespace
 
-import os
 import subprocess
 import git
 
