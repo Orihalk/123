@@ -4,7 +4,6 @@
 # pylint: disable=invalid-name
 # pylint: disable=trailing-newlines
 # pylint: disable=trailing-whitespace
-# pylint: disable=missing-final-newline
 
 import os
 import git
@@ -17,7 +16,7 @@ def clone_repository(repo_url, target_dir):
 # Запуск SAST анализатора на коде
 def run_sast_analysis(target_dir):
     command = f"pylint {target_dir}"
-    subprocess.run(command, shell=True)
+    subprocess.run((command, shell=True), check=False)
 
 # Формирование документа с результатами
 def generate_report(results):
