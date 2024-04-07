@@ -6,8 +6,8 @@
 # pylint: disable=trailing-whitespace
 
 import os
-import git
 import subprocess
+import git
 
 # Клонирование репозитория с GitHub
 def clone_repository(repo_url, target_dir):
